@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#26bs$$g@g(#0j88$%30b3waj_v4vc5j9$oi_1%v+__)+n5^!n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nurilloh_an.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
     'bookmarks',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,11 @@ TEMPLATES = [
         },
     },
 ]
+
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+
 
 WSGI_APPLICATION = 'bookmarks.wsgi.application'
 
