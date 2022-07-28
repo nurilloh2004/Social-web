@@ -12,7 +12,7 @@ from actions.models import Action
 from .models import Profile, Contact
 from .forms import LoginForm, UserRegistrationForm, \
                    UserEditForm, ProfileEditForm
-
+from django.contrib.auth import get_user_model
 
 def user_login(request):
     if request.method == 'POST':
