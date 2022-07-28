@@ -1,15 +1,15 @@
 
-from django.urls import path, include
+from django.urls import include, re_path
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('account/', include('account.urls')),
-    path('social-auth/', include('social_django.urls', namespace='social')),
-    path('images/', include('images.urls', namespace='images')),
+    re_path('admin/', admin.site.urls),
+    re_path('account/', include('account.urls')),
+    re_path('social-auth/', include('social_django.urls', namespace='social')),
+    re_path('images/', include('images.urls', namespace='images')),
     
 ]
 
